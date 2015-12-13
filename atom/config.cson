@@ -1,0 +1,18 @@
+"*":
+  "exception-reporting":
+    userId: "09c0c09f-4100-22fe-8f06-223411b10977"
+  welcome:
+    showOnStartup: false
+  core: {}
+  editor:
+    invisibles: {}
+    showIndentGuide: true
+    showInvisibles: true
+    fontFamily: "Menlo"
+  minimap:
+    plugins:
+      "find-and-replace": true
+      "git-diff": true
+      bookmarks: true
+    displayPluginsControls: false
+  tabs: {}
