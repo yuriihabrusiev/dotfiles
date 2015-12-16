@@ -1,17 +1,23 @@
+[user]
+	name = Yurii Habrusiev
+	email = yuriihabrusiev@gmail.com
+[alias]
+	st = status --short --branch
+	ci = commit
+	co = checkout
+	br = branch
+	df = diff
+	ds = diff --staged
+[core]
+	editor = atom --wait
+	excludesfile = ~/.gitignore
+[push]
+	default = simple
+[credential]
+	helper = osxkeychain
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
-[user]
-	name = Yurii Habrusiev
-	email = yuriihabrusiev@gmail.com
-[core]
-	excludesfile = /Users/yurii/.gitignore_global
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-[credential]
-	helper = osxkeychain
+[include]
+	path = ~/.gitconfig.local
