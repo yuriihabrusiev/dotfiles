@@ -1,3 +1,2 @@
-EXCLUDES="README.md LICENSE.md"
-SYMLINK_DIRS="atom bin zsh"
-UNDOTTED="Brewfile"
+EXCLUDES="Brewfile *.md"
+SYMLINK_DIRS="atom bin git zsh"

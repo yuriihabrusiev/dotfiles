@@ -8,9 +8,11 @@
 	br = branch
 	df = diff
 	ds = diff --staged
+	lg = log --pretty=clean --graph
 [core]
 	editor = atom --wait
-	excludesfile = ~/.gitignore
+[pretty]
+	clean = format:%Cblue%h%Creset %s%C(yellow)%d%Creset %Cgreen%an %ar%Creset
 [push]
 	default = simple
 [credential]
