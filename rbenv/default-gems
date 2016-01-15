@@ -1,1 +1,11 @@
 bundler
+rails
+pry
+awesome_print
+rest-client
+rubocop
+reek
+scss_lint
+slim_lint
+overcommit
+html2slim

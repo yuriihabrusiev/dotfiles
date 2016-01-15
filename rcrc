@@ -1,2 +1,2 @@
 EXCLUDES="Brewfile *.md"
-SYMLINK_DIRS="atom bin git zsh"
+SYMLINK_DIRS="atom bin git vim zsh"

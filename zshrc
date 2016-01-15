@@ -17,7 +17,8 @@ autoload -U colors && colors
 export CLICOLOR=1
 
 # completion
-fpath=(/usr/local/share/zsh-completions $fpath)
+fpath=(~/.zsh/completion /usr/local/share/zsh-completions $fpath)
+
 autoload -U compinit && compinit
 setopt complete_in_word always_to_end correct
 zstyle ':completion:*' menu select
@@ -58,4 +59,5 @@ source `brew --prefix`/etc/profile.d/z.sh
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
+PATH="$HOME/.bin:$PATH"
 export -U PATH
