@@ -1,4 +1,5 @@
-# Ctags
+# Development files and configs
+.env.local
 tags
 
 # Compiled source
