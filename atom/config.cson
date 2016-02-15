@@ -1,18 +1,21 @@
 "*":
-  "exception-reporting":
-    userId: "09c0c09f-4100-22fe-8f06-223411b10977"
-  welcome:
-    showOnStartup: false
-  core: {}
   editor:
+    fontFamily: "Menlo"
+    fontSize: 13
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
-    fontFamily: "Menlo"
+  "exception-reporting":
+    userId: "09c0c09f-4100-22fe-8f06-223411b10977"
+  "file-icons":
+    coloured: false
   minimap:
+    displayPluginsControls: false
     plugins:
+      bookmarks: true
       "find-and-replace": true
       "git-diff": true
-      bookmarks: true
-    displayPluginsControls: false
-  tabs: {}
+  pigments:
+    markerType: "dot"
+  welcome:
+    showOnStartup: false
