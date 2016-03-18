@@ -1,7 +1,7 @@
 "*":
+  core: {}
   editor:
-    fontFamily: "Menlo"
-    fontSize: 13
+    fontFamily: "Inconsolata"
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
