@@ -5,6 +5,7 @@ syntax enable
 set autoindent
 set autoread
 set autowrite
+set background=dark
 set backspace=indent,eol,start
 set colorcolumn=+1
 set complete-=i
@@ -66,6 +67,7 @@ inoremap <S-Tab> <c-n>
 " Load plugins
 if filereadable(expand("~/.vim/plugins.vim"))
   source ~/.vim/plugins.vim
+  colorscheme iceberg
 endif
 
 " Load matchit.vim, but only if the user hasn't installed a newer version.
