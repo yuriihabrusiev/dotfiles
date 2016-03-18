@@ -1,3 +1,6 @@
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 # History
 setopt hist_ignore_all_dups inc_append_history
 HISTFILE=~/.zsh_history
