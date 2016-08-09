@@ -1,6 +1,10 @@
 # Development files and configs
 .env.local
 tags
+.byebug_history
+
+# Vagrant
+.vagrant/
 
 # Compiled source
 *.com
