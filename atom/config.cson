@@ -17,5 +17,8 @@
       "git-diff": true
   pigments:
     markerType: "dot"
+  "tool-bar":
+    iconSize: "16px"
+    position: "Right"
   welcome:
     showOnStartup: false
