@@ -1,2 +1,6 @@
+set __fish_git_prompt_color_branch blue
+
 set __fish_git_prompt_showcolorhints yes
-set __fish_git_prompt_color_branch magenta
+set __fish_git_prompt_showdirtystate yes
+set __fish_git_prompt_showstashstate yes
+set __fish_git_prompt_showuntrackedfiles yes

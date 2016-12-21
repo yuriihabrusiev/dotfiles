@@ -1,13 +1,26 @@
-function fish_prompt --description 'Write out the prompt'
-	set -l color_cwd
+function fish_prompt
+  set -l return_code $status
+  set -l uid (id -u $USER)
+  set -l current_dir (pwd)
 
-	switch $USER
-	case root toor
-		set color_cwd $fish_color_cwd_root
-	case '*'
-		set color_cwd $fish_color_cwd
-	end
+  if test $current_dir != $HOME
+    set_color green
+    echo -n (basename $current_dir)
+    set_color normal
+    echo -n (__fish_git_prompt '(%s)')
+    echo -n ' '
+  end
+  set_color normal
 
-	echo ''
-	echo -s (set_color $color_cwd) (prompt_pwd) (set_color normal) (__fish_git_prompt) ' '
+  if test $return_code -eq 0
+    set_color magenta
+  else
+    set_color red
+  end
+  if [ $uid -eq 0 ]
+    echo -n '# '
+  else
+    echo -n '$ '
+  end
+  set_color normal
 end
