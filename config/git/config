@@ -13,9 +13,9 @@
 	undo = reset --mixed HEAD~1
 	amend = commit --all --amend
 	up = !git pull --rebase --prune $@ && git submodule update --init --recursive
-	save = !git add --all && git commit --message='SAVEPOINT'
+	save = !git add --all && git commit --message="SAVEPOINT"
 	wip = !git add --update && git commit --message="WIP"
-	wipe = !git add --all && git commit --quiet --message='WIPE SAVEPOINT' && git reset --hard HEAD~1
+	wipe = !git add --all && git commit --quiet --message="WIPE SAVEPOINT" && git reset --hard HEAD~1
 	cleanup = !git branch --merged | grep -v '*' | xargs git branch -d
 	conflicts = !git ls-files --unmerged | awk '{print $4}' | sort --unique
 [core]
@@ -39,11 +39,3 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
-[include]
-	path = ~/.gitconfig.local
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true

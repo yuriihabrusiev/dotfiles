@@ -1,10 +1,15 @@
 "*":
-  core: {}
+  core:
+    telemetryConsent: "limited"
+    useCustomTitleBar: true
   editor:
-    fontFamily: "Inconsolata"
+    fontFamily: "Roboto Mono"
+    fontSize: 12
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
+    softWrap: true
+    softWrapAtPreferredLineLength: true
   "exception-reporting":
     userId: "09c0c09f-4100-22fe-8f06-223411b10977"
   "file-icons":
