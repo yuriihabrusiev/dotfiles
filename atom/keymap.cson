@@ -1,8 +1,4 @@
-'atom-workspace':
-  'alt-m': 'minimap:toggle'
 '.platform-darwin':
-  'alt-\\': 'tree-view:toggle-focus'
-
   # Create an empty split pane
   'cmd-k left':  'pane:split-left'
   'cmd-k right': 'pane:split-right'

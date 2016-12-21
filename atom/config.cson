@@ -14,6 +14,11 @@
     userId: "09c0c09f-4100-22fe-8f06-223411b10977"
   "file-icons":
     coloured: false
+  linter:
+    showErrorPanel: false
+  "linter-rubocop":
+    command: "/Users/yurii/.rbenv/versions/2.3.3/bin/rubocop"
+    disableWhenNoConfigFile: true
   minimap:
     displayPluginsControls: false
     plugins:
@@ -22,8 +27,10 @@
       "git-diff": true
   pigments:
     markerType: "dot"
-  "tool-bar":
-    iconSize: "16px"
-    position: "Right"
+  wakatime:
+    apikey: "Saved in your ~/.wakatime.cfg file"
+    showStatusBarIcon: false
+  "wakatime-hidden":
+    lastInit: 1482324588
   welcome:
     showOnStartup: false
