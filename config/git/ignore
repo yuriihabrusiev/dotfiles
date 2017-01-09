@@ -3,6 +3,9 @@
 tags
 .byebug_history
 
+# VS Code
+.vscode/
+
 # Vagrant
 .vagrant/
 

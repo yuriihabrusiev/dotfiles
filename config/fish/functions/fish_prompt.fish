@@ -4,7 +4,7 @@ function fish_prompt
   set -l current_dir (pwd)
 
   if test $current_dir != $HOME
-    set_color green
+    set_color cyan
     echo -n (basename $current_dir)
     set_color normal
     echo -n (__fish_git_prompt '(%s)')
@@ -13,7 +13,7 @@ function fish_prompt
   set_color normal
 
   if test $return_code -eq 0
-    set_color magenta
+    set_color green
   else
     set_color red
   end
