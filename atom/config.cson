@@ -12,8 +12,6 @@
     softWrapAtPreferredLineLength: true
   "exception-reporting":
     userId: "09c0c09f-4100-22fe-8f06-223411b10977"
-  "file-icons":
-    coloured: false
   linter:
     showErrorPanel: false
   "linter-rubocop":
@@ -31,6 +29,6 @@
     apikey: "Saved in your ~/.wakatime.cfg file"
     showStatusBarIcon: false
   "wakatime-hidden":
-    lastInit: 1482324588
+    lastInit: 1484255219
   welcome:
     showOnStartup: false

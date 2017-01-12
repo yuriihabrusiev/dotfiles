@@ -1,12 +1,12 @@
-file-icons@1.7.25
-linter@1.11.18
+linter@1.11.21
 linter-jshint@3.0.2
 linter-rubocop@0.5.2
-minimap@4.25.7
+minimap@4.26.6
 minimap-bookmarks@0.4.2
 minimap-find-and-replace@4.5.1
 minimap-git-diff@4.3.1
 minimap-selection@4.4.0
-pigments@0.37.0
+pigments@0.38.0
+simple-icons@0.1.2
 toggle-quotes@1.0.0
-wakatime@6.0.11
+wakatime@6.0.12
