@@ -9,4 +9,3 @@ minimap-selection@4.4.0
 pigments@0.38.0
 simple-icons@0.1.2
 toggle-quotes@1.0.0
-wakatime@6.0.12
