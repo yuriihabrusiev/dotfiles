@@ -1,6 +1,6 @@
-set -x LANG en_US.UTF-8
-set -x EDITOR atom
-set -x VISUAL atom
-set -x PATH ~/.bin $PATH
+set --export LANG en_US.UTF-8
+set --export EDITOR 'atom --wait'
+set --export VISUAL $EDITOR
+set --export PATH ~/.bin $PATH
 
-set -g fish_prompt_pwd_dir_length 0
+set --global fish_prompt_pwd_dir_length 0

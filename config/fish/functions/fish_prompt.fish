@@ -6,21 +6,20 @@ function fish_prompt
   if test $current_dir != $HOME
     set_color cyan
     echo -n (basename $current_dir)
-    set_color normal
-    echo -n (__fish_git_prompt '(%s)')
     echo -n ' '
   end
   set_color normal
 
-  if test $return_code -eq 0
-    set_color green
-  else
+  if test $return_code -ne 0
     set_color red
+    echo -n "• "
   end
-  if [ $uid -eq 0 ]
-    echo -n '# '
+
+  if test $uid -eq 0
+    set_color red
   else
-    echo -n '$ '
+    set_color magenta
   end
+  echo -n '→ '
   set_color normal
 end
