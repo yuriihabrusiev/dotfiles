@@ -20,3 +20,12 @@ atom.commands.add 'atom-text-editor', 'utils:to-class-name', ->
   return unless editor = atom.workspace.getActiveTextEditor()
   editor.replaceSelectedText selectWordIfEmpty: true, (text) ->
     toCamelCase(text)
+
+atom.commands.add 'atom-workspace', 'one-themes:toggle', ->
+  lightTheme   = ["one-light-ui", "one-light-syntax"]
+  darkTheme    = ["one-dark-ui", "one-dark-syntax"]
+  currentTheme = atom.themes.getEnabledThemeNames().reverse()
+  if currentTheme[0] == darkTheme[0]
+    atom.config.set('core.themes', lightTheme)
+  else
+    atom.config.set('core.themes', darkTheme)
