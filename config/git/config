@@ -2,6 +2,7 @@
 	name = Yurii Habrusiev
 	email = yuriihabrusiev@gmail.com
 [alias]
+	au = add --update
 	st = status --short --branch
 	pf = push --force-with-lease
 	ci = commit
@@ -22,7 +23,7 @@
 [core]
 	editor = atom --wait
 [pretty]
-	clean = format:%Cblue%h%Creset %s%C(yellow)%d%Creset %Cgreen%an %ar%Creset
+	clean = format:%Cblue%h%Creset %s%C(yellow)%d%Creset %Cgreen%an %ad%Creset
 [push]
 	default = simple
 [credential]
