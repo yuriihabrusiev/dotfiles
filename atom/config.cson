@@ -16,5 +16,7 @@
     userId: "09c0c09f-4100-22fe-8f06-223411b10977"
   pigments:
     markerType: "dot"
+  tabs:
+    enableVcsColoring: true
   welcome:
     showOnStartup: false
