@@ -1,2 +1,0 @@
-EXCLUDES="Brewfile *.md"
-SYMLINK_DIRS="atom bin fish git vim"
