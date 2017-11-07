@@ -5,6 +5,10 @@
     closeDeletedFileTabs: true
     projectHome: "~/Code"
     telemetryConsent: "limited"
+    themes: [
+      "one-light-ui"
+      "one-light-syntax"
+    ]
     titleBar: "hidden"
   editor:
     fontFamily: "SF Mono"
@@ -15,7 +19,7 @@
   "exception-reporting":
     userId: "09c0c09f-4100-22fe-8f06-223411b10977"
   pigments:
-    markerType: "dot"
+    markerType: "native-dot"
   tabs:
     enableVcsColoring: true
   welcome:

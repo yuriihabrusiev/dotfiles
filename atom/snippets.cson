@@ -1,4 +1,7 @@
 '.source.ruby':
+  'private def':
+    'prefix': 'pdef'
+    'body': 'private def ${1:method_name}\n\t$0\nend'
   'byebug':
     'prefix': 'bb'
     'body': 'byebug'
@@ -14,3 +17,7 @@
   'data-behavior':
     'prefix': 'dbh'
     'body': 'data-behavior="${0:name}"'
+'.source.coffee':
+  'ERB':
+    'prefix': '"='
+    'body': '"<%=j $0 %>'

@@ -1,10 +1,9 @@
 storage
 compile-cache
-dev
-.npm
-.node-gyp
-
 packages
+recovery
 blob-store
+dev
 .apm
+.npm
 .node-gyp

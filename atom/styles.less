@@ -15,6 +15,8 @@
  * (To see them, uncomment and save)
  */
 
+@import "syntax-variables";
+
 // style the background color of the tree view
 .tree-view {
   // background-color: whitesmoke;
@@ -29,4 +31,10 @@ atom-text-editor {
 // To style other content in the text editor's shadow DOM, use the ::shadow expression
 atom-text-editor::shadow .cursor {
   // border-color: red;
+}
+
+.syntax--source.syntax--ruby {
+  .syntax--keyword.syntax--operator {
+    color: @hue-1;
+  }
 }
