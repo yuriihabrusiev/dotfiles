@@ -1,0 +1,25 @@
+[user]
+	name = Yurii Habrusiev
+	email = yuriihabrusiev@users.noreply.github.com
+[core]
+	editor = atom --wait
+[alias]
+	co = checkout
+	st = status --short --branch
+	lg = log --pretty=github --graph --date=format:'%b %d %Y'
+	pf = push --force-with-lease
+	rb = rebase --interactive --autosquash --autostash
+	undo = reset --mixed HEAD~1
+	amend = commit --all --amend
+	up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+	save = !git add --all && git commit --message="SAVEPOINT"
+	wip = !git add --update && git commit --message="WIP"
+	wipe = !git add --all && git commit --quiet --message="WIPE SAVEPOINT" && git reset --hard HEAD~1
+	cleanup = !git branch --merged | grep -v '*' | xargs git branch -d
+[pretty]
+	github = %s %C(yellow)%h%d%Creset\n%C(green)%an%Creset committed on %C(blue)%ad%Creset
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
