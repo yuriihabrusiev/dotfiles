@@ -1,0 +1,2 @@
+HOSTNAME="macos"
+EXCLUDES="*.md *.backup"

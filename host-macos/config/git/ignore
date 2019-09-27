@@ -1,11 +1,18 @@
-# Markdown TODO and scratchpad
-*.todo.md
-scratchpad.txt
+# Playground and Scratchpad
+.examples/
+.secrets/
+scratchpad.*
 
 # Development files and configs
-.env
-.env.local
 .envrc
+.env
+.env-sample
+.env.example
+.env.local
+.env.dev
+.env.test
+.env.testing
+.env.production
 tags
 .byebug_history
 
@@ -37,7 +44,7 @@ tags
 
 # Logs and databases
 *.log
-*.sql
+# *.sql
 *.sqlite
 # Exclude Rails' db/structure.sql
 !structure.sql
