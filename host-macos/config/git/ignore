@@ -2,6 +2,7 @@
 .examples/
 .secrets/
 scratchpad.*
+notes.md
 
 # Development files and configs
 .envrc
@@ -15,6 +16,7 @@ scratchpad.*
 .env.production
 tags
 .byebug_history
+.rubocop_todo.yml
 
 # VS Code
 .vscode/
