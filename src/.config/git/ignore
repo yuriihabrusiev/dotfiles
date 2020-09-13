@@ -4,6 +4,9 @@
 scratchpad.*
 notes.md
 
+# Ignore to enable Prettier secretly
+.prettierrc.toml
+
 # Development files and configs
 .envrc
 .env
