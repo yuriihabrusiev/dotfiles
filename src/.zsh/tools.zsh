@@ -4,6 +4,7 @@ source /usr/local/share/zsh-history-substring-search/zsh-history-substring-searc
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+eval "$(direnv hook zsh)"
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
 eval "$(gh completion --shell zsh)"
@@ -12,3 +13,5 @@ eval "$(gh completion --shell zsh)"
 if [ -f '/Users/yurii/.netlify/helper/path.zsh.inc' ]; then
   source '/Users/yurii/.netlify/helper/path.zsh.inc'
 fi
+
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"

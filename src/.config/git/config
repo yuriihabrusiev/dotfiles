@@ -4,12 +4,13 @@
 [alias]
 	co = checkout
 	st = status --short --branch
-	lg = log --pretty=github --graph --date=human
+	lg = log --pretty=readable --graph --date=human
 	pf = push --force-with-lease
 	rb = rebase --interactive --autosquash --autostash
+  cp = cherry-pick
+	up = !git pull --rebase --prune $@ && git submodule update --init --recursive
 	undo = reset --mixed HEAD~1
 	amend = commit --all --amend
-	up = !git pull --rebase --prune $@ && git submodule update --init --recursive
 	save = !git add --all && git commit --message="SAVEPOINT"
 	wip = !git add --update && git commit --message="WIP"
 	wipe = !git add --all && git commit --quiet --message="WIPE SAVEPOINT" && git reset --hard HEAD~1
@@ -24,7 +25,7 @@
 	autoSquash = true
 	autoStash = true
 [pretty]
-	github = "%C(green)%s%Creset %h%C(yellow)%d%Creset%n%an committed on %ad%Creset"
+	readable = "%s%Creset %C(magenta)%h%C(yellow)%d%Creset%n  %C(blue)%an committed on %ad%Creset"
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
