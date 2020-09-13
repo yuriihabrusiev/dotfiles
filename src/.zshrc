@@ -21,20 +21,22 @@ zstyle ':completion:*' group-name '' # group results by category
 zstyle ':completion:::::' completer _expand _complete _ignored _approximate #enable approximate matches for completion
 autoload -Uz compinit; compinit -i
 
-autoload -Uz vcs_info
-precmd_vcs_info() { vcs_info }
-precmd_functions+=( precmd_vcs_info )
-setopt prompt_subst
-zstyle ':vcs_info:git:*' formats '(%F{blue}%b%f)'
-zstyle ':vcs_info:*' enable git
-
-export PROMPT='%F{blue}%c%f ❯ '
-export RPROMPT=\$vcs_info_msg_0_
-
 # fpath+=("$HOME/.zsh")
 
-# autoload -U promptinit; promptinit
-# prompt common
+autoload -U promptinit; promptinit
+if type -f prompt_pure_setup > /dev/null; then
+  prompt pure
+else
+  autoload -Uz vcs_info
+  precmd_vcs_info() { vcs_info }
+  precmd_functions+=( precmd_vcs_info )
+  setopt prompt_subst
+  zstyle ':vcs_info:git:*' formats '(%F{blue}%b%f)'
+  zstyle ':vcs_info:*' enable git
+
+  export PROMPT='%F{blue}%c%f ❯ '
+  export RPROMPT=\$vcs_info_msg_0_
+fi
 
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"

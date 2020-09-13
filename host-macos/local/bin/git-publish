@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-branch=${1-$(git symbolic-ref HEAD | sed 's/refs\/heads\///')}
-git push --set-upstream origin $branch
