@@ -4,6 +4,7 @@
 [alias]
 	co = checkout
 	st = status --short --branch
+  sw = switch
 	lg = log --pretty=readable --graph --date=human
 	pf = push --force-with-lease
 	rb = rebase --interactive --autosquash --autostash
@@ -17,15 +18,17 @@
 	cleanup = !git branch --merged | grep -v '*' | xargs git branch -d
 [core]
 	editor = code --wait
-[diff]
-	tool = vscode-difftool
-[difftool "vscode-difftool"]
-	cmd = code --wait --diff $LOCAL $REMOTE
+[pull]
+	ff = only
 [rebase]
 	autoSquash = true
 	autoStash = true
 [pretty]
 	readable = "%s%Creset %C(magenta)%h%C(yellow)%d%Creset%n  %C(blue)%an committed on %ad%Creset"
+[diff]
+	tool = vscode-difftool
+[difftool "vscode-difftool"]
+	cmd = code --wait --diff $LOCAL $REMOTE
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

@@ -4,10 +4,14 @@ source /usr/local/share/zsh-history-substring-search/zsh-history-substring-searc
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-eval "$(direnv hook zsh)"
-eval "$(rbenv init -)"
-eval "$(nodenv init -)"
-eval "$(gh completion --shell zsh)"
+exists() {
+  command -v "$1" >/dev/null 2>&1
+}
+
+exists direnv && eval "$(direnv hook zsh)"
+exists rbenv && eval "$(rbenv init -)"
+exists nodenv && eval "$(nodenv init -)"
+exists gh && eval "$(gh completion --shell zsh)"
 
 # The next line updates PATH for Netlify's Git Credential Helper.
 if [ -f '/Users/yurii/.netlify/helper/path.zsh.inc' ]; then
