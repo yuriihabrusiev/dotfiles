@@ -23,6 +23,7 @@
 [rebase]
 	autoSquash = true
 	autoStash = true
+	instructionFormat = (%an <%ae>) %s
 [pretty]
 	readable = "%s%Creset %C(magenta)%h%C(yellow)%d%Creset%n  %C(blue)%an committed on %ad%Creset"
 [diff]
