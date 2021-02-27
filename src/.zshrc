@@ -1,17 +1,29 @@
-# zmodload zsh/zprof
+# oh-my-zsh https://github.com/ohmyzsh/ohmyzsh
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_CUSTOM="$HOME/.zsh"
+ZSH_THEME="prompt-pure"
+ENABLE_CORRECTION="true"
+plugins=(direnv rbenv)
+source $ZSH/oh-my-zsh.sh
 
-config_files=($HOME/.zsh/*.zsh)
+# User configuration
 
-for config in ${${config_files:#*/completion.zsh}:#*/tools.zsh}; do
-  source $config
-done
+export LANG=en_US.UTF-8
+export VISUAL="code --wait"
+export EDITOR=$VISUAL
 
-for config in ${(M)config_files:#*/completion.zsh}; do
-  source $config
-done
 
-for config in ${(M)config_files:#*/tools.zsh}; do
-  source $config
-done
+eval "$(gh completion --shell zsh)"
+# eval "$(nodenv init -)"
 
-# zprof
+# The next line updates PATH for Netlify's Git Credential Helper.
+if [ -f "$HOME/.netlify/helper/path.zsh.inc" ]; then
+  source "$HOME/.netlify/helper/path.zsh.inc"
+fi
+
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+bindkey -M emacs "$terminfo[kcuu1]" history-substring-search-up
+bindkey -M emacs "$terminfo[kcud1]" history-substring-search-down

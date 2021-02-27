@@ -1,5 +1,4 @@
-autoload -U promptinit
-promptinit
+autoload -U promptinit; promptinit
 
 if type -f prompt_pure_setup > /dev/null; then
   prompt pure
