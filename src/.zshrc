@@ -1,3 +1,5 @@
+# zmodload zsh/zprof
+
 config_files=($HOME/.zsh/*.zsh)
 
 for config in ${${config_files:#*/completion.zsh}:#*/tools.zsh}; do
@@ -11,3 +13,5 @@ done
 for config in ${(M)config_files:#*/tools.zsh}; do
   source $config
 done
+
+# zprof

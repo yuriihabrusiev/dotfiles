@@ -33,6 +33,9 @@ zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-dir
 
 zstyle ':completion:*' users off
 
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' format '• %d •'
+
 # Use caching so that commands like apt and dpkg complete are useable
 zstyle ':completion::complete:*' use-cache 1
 zstyle ':completion::complete:*' cache-path $ZSH/cache/

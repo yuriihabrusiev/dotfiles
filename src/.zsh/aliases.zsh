@@ -7,4 +7,4 @@ alias bundle='nocorrect bundle'
 alias less='less -R'
 alias grep='grep --color=auto'
 
-alias ll='ls -lh'
+alias ll='exa --long --header --git --group-directories-first'
