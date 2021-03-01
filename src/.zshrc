@@ -1,7 +1,7 @@
 # oh-my-zsh https://github.com/ohmyzsh/ohmyzsh
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_CUSTOM="$HOME/.zsh"
-ZSH_THEME="prompt-pure"
+ZSH_THEME="starship"
 ENABLE_CORRECTION="true"
 plugins=(direnv rbenv)
 source $ZSH/oh-my-zsh.sh
