@@ -1,5 +1,8 @@
-[git_branch]
-symbol = ""
+[nodejs]
+symbol = "🐢 "
+
+[aws]
+disabled = true
 
 [battery]
 disabled = true
