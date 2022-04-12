@@ -11,7 +11,7 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 export VISUAL=nova
 export EDITOR=vim
-
+export BUNDLER_EDITOR="nova --no-recent"
 
 eval "$(gh completion --shell zsh)"
 # eval "$(nodenv init -)"
