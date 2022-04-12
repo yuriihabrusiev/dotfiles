@@ -9,8 +9,8 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export LANG=en_US.UTF-8
-export VISUAL="code --wait"
-export EDITOR=$VISUAL
+export VISUAL=nova
+export EDITOR=vim
 
 
 eval "$(gh completion --shell zsh)"

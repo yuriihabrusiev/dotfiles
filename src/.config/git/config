@@ -17,7 +17,7 @@
 	wipe = !git add --all && git commit --quiet --message="WIPE SAVEPOINT" && git reset --hard HEAD~1
 	cleanup = !git branch --merged | grep -v '*' | xargs git branch -d
 [core]
-	editor = code --wait
+	editor = nova --wait
 [pull]
 	ff = only
 [rebase]
