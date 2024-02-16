@@ -1,7 +1,8 @@
-# My dotfiles
+# DOTFILES
+My dotfiles and configs for [macOS] and [GitHub Codespaces].
 
-```sh
-$ git clone https://github.com/yuriihabrusiev/dotfiles.git ~/.dotfiles
-$ cd ~/.dotfiles
-$ bin/bootstrap
-```
+## Installation
+To manually install dotfiles, clone the repository and run the `script/bootstrap` script.
+
+[macOS]: https://www.apple.com/macos/
+[GitHub Codespaces]: https://github.com/features/codespaces
