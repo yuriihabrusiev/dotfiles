@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+case "$(uname -s)" in
+  Darwin)
+    OS="macos"
+    ;;
+  Linux)
+    OS="linux"
+    ;;
+  *)
+    echo "Operating system not supported"
+    exit 1
+    ;;
+esac
+
+DOTFILES_ROOT=$(pwd -P)
+DOTFILES_SOURCE="src/common src/$OS"
+
+function install_from() {
+  source_dir=$1
+  for file in $(find $source_dir -type f); do
+    relative_file_path="${file#"${source_dir}"/}"
+    target_file="${HOME}/${relative_file_path}"
+    target_dir="${target_file%/*}"
+    if test ! -d "${target_dir}"; then
+      mkdir -p "${target_dir}"
+    fi
+
+    echo "Installing $target_file"
+    ln -sf "${file}" "${target_file}"
+  done
+}
+
+for source_dir in $DOTFILES_SOURCE; do
+  install_from $DOTFILES_ROOT/$source_dir
+done
