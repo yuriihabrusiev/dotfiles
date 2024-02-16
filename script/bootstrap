@@ -1,18 +1,8 @@
 #!/usr/bin/env bash
 
-case "$(uname -s)" in
-  Darwin)
-    OS="macos"
-    ;;
-  Linux)
-    OS="linux"
-    ;;
-  *)
-    echo "Operating system not supported"
-    exit 1
-    ;;
-esac
+source "$(dirname ${BASH_SOURCE[0]})/utils.sh"
 
+OS="$(get_os)"
 DOTFILES_ROOT=$(pwd -P)
 DOTFILES_SOURCE="src/common src/$OS"
 
