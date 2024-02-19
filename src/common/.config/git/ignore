@@ -1,14 +1,9 @@
-# Playground and Scratchpad
-.examples/
-.notes/
-notes.md
 
 # Development files and configs
+.vscode/*
+!.vscode/extensions.json
 .envrc
 .env
-.env.*
-.env-*
-tags
 .byebug_history
 
 # Ignore to enable Prettier silently
