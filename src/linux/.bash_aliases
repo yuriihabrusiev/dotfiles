@@ -2,6 +2,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+alias envup='set -o allexport; source .env; set +o allexport'
+
 # Docked Rails
 # https://github.com/rails/docked
 # docker build -t docked-rails .
