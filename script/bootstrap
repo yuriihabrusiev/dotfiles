@@ -1,14 +1,22 @@
 #!/usr/bin/env bash
 
-source "$(dirname ${BASH_SOURCE[0]})/utils.sh"
+set -e
 
-OS="$(get_os)"
-DOTFILES_ROOT=$(pwd -P)
-DOTFILES_SOURCE="src/common src/$OS"
+get_os() {
+  local os=""
+  local kernelName=""
 
-if [[ "$CLOUD_SHELL" == "true" ]]; then
-  DOTFILES_SOURCE+=" src/cloudshell"
-fi
+  kernelName="$(uname -s)"
+  if [ "$kernelName" == "Darwin" ]; then
+    os="macos"
+  elif [ "$kernelName" == "Linux" ]; then
+    os="linux"
+  else
+    os="$kernelName"
+  fi
+
+  echo "$os"
+}
 
 function install_from() {
   source_dir=$1
@@ -20,11 +28,20 @@ function install_from() {
       mkdir -p "${target_dir}"
     fi
 
-    echo "Installing $target_file"
+    echo "    ${target_file##$HOME/}"
     ln -sf "${file}" "${target_file}"
   done
 }
 
+OS="$(get_os)"
+DOTFILES_ROOT=$(pwd -P)
+DOTFILES_SOURCE="src/common src/$OS"
+
+if [[ "$CLOUD_SHELL" == "true" ]]; then
+  DOTFILES_SOURCE+=" src/cloudshell"
+fi
+
 for source_dir in $DOTFILES_SOURCE; do
+  echo "=>  Installing from $source_dir"
   install_from $DOTFILES_ROOT/$source_dir
 done
