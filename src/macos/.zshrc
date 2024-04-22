@@ -2,7 +2,7 @@ if type brew &>/dev/null; then
   fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 fi
 
-local_functions="~/.local/share/zsh/site-functions"
+local_functions="$HOME/.local/share/zsh/site-functions"
 if [[ -z ${fpath[(r)$local_functions]} ]] ; then
   fpath=($local_functions $fpath)
   autoload -Uz ${local_functions}/*(:t)
