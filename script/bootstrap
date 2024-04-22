@@ -6,6 +6,10 @@ OS="$(get_os)"
 DOTFILES_ROOT=$(pwd -P)
 DOTFILES_SOURCE="src/common src/$OS"
 
+if [[ "$CLOUD_SHELL" == "true" ]]; then
+  DOTFILES_SOURCE+=" src/cloudshell"
+fi
+
 function install_from() {
   source_dir=$1
   for file in $(find $source_dir -type f); do
