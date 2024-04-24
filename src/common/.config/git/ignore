@@ -1,10 +1,25 @@
+# local files
+*.local
+*.local.*
+
+# .env
+.env
+.env.*
+!.env.example
+!.env.development
+!.env.test
+!.env.production
 
 # Development files and configs
 .vscode/*
 !.vscode/extensions.json
-.envrc
-.env
-.byebug_history
+
+# Taskfile https://taskfile.dev/
+# Use *.dist.yml
+Taskfile.yml
+taskfile.yml
+Taskfile.yaml
+taskfile.yaml
 
 # Ignore to enable Prettier silently
 .prettierrc.toml
