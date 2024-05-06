@@ -38,8 +38,9 @@ if [ -f "$HOME/.zshrc.local" ]; then
   source "$HOME/.zshrc.local"
 fi
 
+[ -d $HOME/.local/share/gh/extensions/gh-copilot ] && eval "$(gh copilot alias -- zsh)"
+
 if command -v starship &> /dev/null; then
   [ $TERM_PROGRAM = "WarpTerminal" ] && export STARSHIP_CONFIG=$HOME/.config/starship-warp.toml
   eval "$(starship init zsh)"
 fi
-eval "$(gh copilot alias -- zsh)"

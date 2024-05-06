@@ -10,6 +10,16 @@ brew "ripgrep"
 brew "fzf"
 brew "bat"
 
+# Productivity
+cask "1password"
+cask "1password-cli"
+cask "raycast"
+cask "obsidian"
+cask "google-chrome"
+cask "microsoft-edge"
+cask "slack"
+cask "zoom"
+
 # Developer Tools & Fonts
 cask "visual-studio-code"
 cask "github"
@@ -20,15 +30,3 @@ cask "google-cloud-sdk"
 cask "font-cascadia-code"
 cask "font-cascadia-mono"
 cask "font-monaspace"
-
-# Browsers & Communication
-cask "google-chrome"
-cask "microsoft-edge"
-cask "slack"
-cask "zoom"
-
-# Productivity
-cask "raycast"
-cask "1password"
-cask "1password-cli"
-cask "obsidian"
