@@ -1,19 +1,16 @@
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 
-brew "fnm"
-brew "gh"
 brew "git"
+brew "gh"
 brew "mise"
 brew "starship"
-brew "ripgrep"
-brew "fzf"
-brew "bat"
 
 # Productivity
 cask "1password"
 cask "1password-cli"
 cask "raycast"
+cask "chatgpt"
 cask "obsidian"
 cask "google-chrome"
 cask "microsoft-edge"
