@@ -40,6 +40,8 @@ fi
 
 [ -d $HOME/.local/share/gh/extensions/gh-copilot ] && eval "$(gh copilot alias -- zsh)"
 
+eval "$(mise activate)"
+
 if command -v starship &> /dev/null; then
   [ $TERM_PROGRAM = "WarpTerminal" ] && export STARSHIP_CONFIG=$HOME/.config/starship-warp.toml
   eval "$(starship init zsh)"
