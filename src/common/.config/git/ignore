@@ -1,17 +1,17 @@
 # local files
-*.local
-*.local.*
+/*.local
+/*.local.*
 
 # .env
-.env
-.env.*
+/.env
+/.env.*
 !.env.example
 !.env.development
 !.env.test
 !.env.production
 
 # Development files and configs
-.vscode/*
+/.vscode/*
 !.vscode/extensions.json
 
 # Taskfile https://taskfile.dev/

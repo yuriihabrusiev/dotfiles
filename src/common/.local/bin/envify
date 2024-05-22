@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -e
+
+if [[ -f .env ]]; then
+  echo ".env file already exists"
+  exit 1
+fi
+
+echo "Creating .env file"
+echo > .env
