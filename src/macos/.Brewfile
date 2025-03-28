@@ -1,10 +1,17 @@
 tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
 
-brew "git"
-brew "gh"
-brew "mise"
+brew "fish"
 brew "starship"
+brew "mise"
+brew "direnv"
+brew "git"
+brew "git-lfs"
+brew "gh"
+brew "lazygit"
+brew "lazydocker"
+brew "go-task"
+brew "uv"
+brew "cloc"
 
 # Productivity
 cask "1password"
@@ -16,12 +23,19 @@ cask "google-chrome"
 cask "microsoft-edge"
 cask "slack"
 cask "zoom"
+cask "notion"
+cask "notion-calendar"
+cask "figma"
 
-# Developer Tools & Fonts
+# Developer Tools
 cask "visual-studio-code"
 cask "github"
 cask "ghostty"
 cask "google-cloud-sdk"
+
+# Fonts
 cask "font-cascadia-code"
 cask "font-cascadia-mono"
 cask "font-monaspace"
+cask "font-geist"
+cask "font-geist-mono"

@@ -28,7 +28,7 @@ function install_from() {
       mkdir -p "${target_dir}"
     fi
 
-    echo "    ${target_file##$HOME/}"
+    echo "-> ${target_file##$HOME/}"
     ln -sf "${file}" "${target_file}"
   done
 }
@@ -42,6 +42,6 @@ if [[ "$CLOUD_SHELL" == "true" ]]; then
 fi
 
 for source_dir in $DOTFILES_SOURCE; do
-  echo "=>  Installing from $source_dir"
+  echo "Installing from $source_dir"
   install_from $DOTFILES_ROOT/$source_dir
 done

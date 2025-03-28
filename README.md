@@ -14,7 +14,7 @@ script/bootstrap
 
 3. Install apps and tools.
 ```sh
-brew bundle install --global --no-lock
+brew bundle install --global
 ```
 
 ## Installation on Linux
