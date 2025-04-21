@@ -1,5 +1,3 @@
-tap "homebrew/bundle"
-
 brew "fish"
 brew "starship"
 brew "mise"
@@ -18,6 +16,7 @@ cask "1password"
 cask "1password-cli"
 cask "raycast"
 cask "chatgpt"
+cask "claude"
 cask "obsidian"
 cask "google-chrome"
 cask "microsoft-edge"
@@ -25,11 +24,13 @@ cask "slack"
 cask "zoom"
 cask "notion"
 cask "notion-calendar"
+cask "notion-mail"
 cask "figma"
 
 # Developer Tools
 cask "visual-studio-code"
 cask "github"
+cask "zed"
 cask "ghostty"
 cask "google-cloud-sdk"
 

@@ -1,4 +1,4 @@
 command = /opt/homebrew/bin/fish --login
-theme = "catppuccin-macchiato"
-font-family = "Geist Mono"
+theme = "light:catppuccin-latte,dark:catppuccin-macchiato"
+font-family = "Monaspace Neon"
 adjust-cell-height = 25%
