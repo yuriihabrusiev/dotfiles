@@ -3,10 +3,19 @@ abbr bup "brew upgrade"
 abbr bbi "brew bundle install --global"
 abbr bbc "brew bundle cleanup --global"
 
-fish_add_path -m $HOME/.local/bin
+# Google Cloud SDK
+if test -f '/opt/homebrew/share/google-cloud-sdk/path.fish.inc'
+    source '/opt/homebrew/share/google-cloud-sdk/path.fish.inc'
+end
+
+# Enable shell command completion for gcloud
+if test -f '/opt/homebrew/share/google-cloud-sdk/completion.fish.inc'
+    source '/opt/homebrew/share/google-cloud-sdk/completion.fish.inc'
+end
 
 if status is-interactive
-  set -gx EDITOR "code --wait"
-
-  starship init fish | source
+    set -gx EDITOR "zed --wait"
+    atuin init fish | source
+    zoxide init --cmd cd fish | source
+    starship init fish | source
 end

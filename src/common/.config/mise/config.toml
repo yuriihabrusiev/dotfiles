@@ -1,7 +1,36 @@
-[tools]
-node = "lts"
-python = "latest"
-ruby = "latest"
-
 [settings]
 experimental = true
+idiomatic_version_file_enable_tools = []
+
+[env]
+_.path = ["~/.local/bin", "~/go/bin"]
+
+[tasks."python:remove_cache"]
+run = "find . -type d -name \"__pycache__\" -exec rm -r {} +"
+description = 'Remove __pycache__ directories'
+dir = "{{cwd}}"
+
+[tasks."python:remove_pyc"]
+run = "find . -type f -name \"*.pyc\" -delete"
+description = 'Remove *.pyc files'
+dir = "{{cwd}}"
+
+[tasks."python:remove_pytest_cache"]
+run = "rm -rf .pytest_cache .coverage"
+description = 'Remove pytest cache'
+dir = "{{cwd}}"
+
+[tasks."python:clean"]
+depends = [
+    "python:remove_pytest_cache",
+    "python:remove_pyc",
+    "python:remove_cache",
+]
+description = 'Clean Python artifacts'
+dir = "{{cwd}}"
+
+[tasks."python:wipe"]
+depends = "python:clean"
+run = "rm -rf .venv"
+description = 'Reset Python environment'
+dir = "{{cwd}}"

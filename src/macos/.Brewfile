@@ -10,6 +10,16 @@ brew "lazydocker"
 brew "go-task"
 brew "uv"
 brew "cloc"
+brew "yq"
+brew "bat"
+brew "fd"
+brew "fzf"
+brew "ripgrep"
+brew "zoxide"
+brew "atuin"
+brew "yazi"
+
+brew "repomix"
 
 # Productivity
 cask "1password"
@@ -33,6 +43,7 @@ cask "github"
 cask "zed"
 cask "ghostty"
 cask "google-cloud-sdk"
+cask "yaak"
 
 # Fonts
 cask "font-cascadia-code"

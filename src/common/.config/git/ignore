@@ -1,81 +1,15 @@
-# local files
 /*.local
 /*.local.*
-
-# .env
 /.env
 /.env.*
-!.env.example
-!.env.development
-!.env.test
-!.env.production
-
-# Development files and configs
 /.vscode/*
 !.vscode/extensions.json
+*.code-workspace
+.github/copilot-instructions.md
 
-# Taskfile https://taskfile.dev/
-# Use *.dist.yml
-Taskfile.yml
-taskfile.yml
-Taskfile.yaml
-taskfile.yaml
-
-# Ignore to enable Prettier silently
-.prettierrc.toml
-
-
-# Compiled source
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
-
-# Packages
-# it's better to unpack these files and commit the raw source
-# git has its own built in compression methods
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-
-# Logs and databases
 *.log
 *.sql
 *.sqlite
-# Exclude Rails' db/structure.sql
-!structure.sql
-
-# Automatically created by GitHub for Mac
 
 .DS_Store
-.AppleDouble
-.LSOverride
-
-# Icon must end with two \r
-Icon
-
-
-# Thumbnails
 ._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
