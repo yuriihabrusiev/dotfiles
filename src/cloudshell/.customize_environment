@@ -1,4 +1,0 @@
-#!/bin/sh
-
-apt update
-apt -y install google-cloud-cli-gke-gcloud-auth-plugin

@@ -2,22 +2,6 @@
 
 set -e
 
-get_os() {
-  local os=""
-  local kernelName=""
-
-  kernelName="$(uname -s)"
-  if [ "$kernelName" == "Darwin" ]; then
-    os="macos"
-  elif [ "$kernelName" == "Linux" ]; then
-    os="linux"
-  else
-    os="$kernelName"
-  fi
-
-  echo "$os"
-}
-
 function install_from() {
   source_dir=$1
   for file in $(find $source_dir -type f); do
@@ -33,15 +17,4 @@ function install_from() {
   done
 }
 
-OS="$(get_os)"
-DOTFILES_ROOT=$(pwd -P)
-DOTFILES_SOURCE="src/common src/$OS"
-
-if [[ "$CLOUD_SHELL" == "true" ]]; then
-  DOTFILES_SOURCE+=" src/cloudshell"
-fi
-
-for source_dir in $DOTFILES_SOURCE; do
-  echo "Installing from $source_dir"
-  install_from $DOTFILES_ROOT/$source_dir
-done
+install_from "$(pwd)/home"

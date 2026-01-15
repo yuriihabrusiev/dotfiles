@@ -1,0 +1,10 @@
+/.env
+/.zed/*
+/.vscode/*
+/*.local
+*.local.*
+*.override.*
+*.log
+*.sqlite
+.DS_Store
+._*

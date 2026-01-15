@@ -1,0 +1,87 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "wrap_guides": [88],
+  "edit_predictions": {
+    "mode": "subtle",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null,
+    },
+    "enabled_in_text_threads": false,
+  },
+  "agent": {
+    "always_allow_tool_actions": true,
+    "play_sound_when_agent_done": true,
+    "default_profile": "write",
+    "model_parameters": [],
+    "default_model": {
+      "provider": "openai",
+      "model": "gpt-5",
+    },
+    // "dock": "left",
+  },
+  "ui_font_size": 16,
+  // "buffer_font_family": "Monaspace Neon",
+  "buffer_font_family": "Google Sans Code",
+  "buffer_font_size": 13,
+  // "buffer_font_features": {
+  //   "calt": true,
+  //   "liga": true,
+  //   "ss01": true,
+  //   "ss02": true,
+  //   "ss03": true,
+  //   "ss04": true,
+  // },
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "One Dark",
+  },
+  "use_system_window_tabs": true,
+  "minimap": {
+    "show": "auto",
+    "thumb": "hover",
+    // "display_in": "active_editor"
+  },
+  "autosave": "on_focus_change",
+  "project_panel": { "default_width": 360 },
+  "outline_panel": { "default_width": 360 },
+  // "git_panel": { "dock": "right" },
+  "collaboration_panel": { "button": false },
+  "terminal": {
+    // "font_family": "Monaspace Xenon",
+    "shell": {
+      "program": "fish",
+    },
+    "detect_venv": "off",
+  },
+  "file_types": {
+    // "JSONC": ["**/.zed/**/*.json", "**/zed/**/*.json", "**/Zed/**/*.json", "**/.vscode/**/*.json"],
+    "Shell Script": [".env.*", ".envrc"],
+  },
+  "languages": {
+    "Python": {
+      "language_servers": [
+        "ty",
+        "ruff",
+        "!basedpyright",
+        "!pyrefly",
+        "!pyright",
+        "!pylsp",
+      ],
+      "format_on_save": "on",
+      "formatter": [
+        { "code_action": "source.fixAll.ruff" },
+        { "code_action": "source.organizeImports.ruff" },
+        { "language_server": { "name": "ruff" } },
+      ],
+    },
+  },
+}
