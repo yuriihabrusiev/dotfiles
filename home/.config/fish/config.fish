@@ -7,6 +7,6 @@ set -gx XDG_CONFIG_HOME "$HOME/.config"
 
 if status is-interactive
     atuin init fish --disable-up-arrow | source
-    zoxide init --cmd cd fish | source
+    zoxide init fish | source
     starship init fish | source
 end
