@@ -23,20 +23,33 @@
     },
   },
   "edit_predictions": {
+    "provider": "copilot",
     "mode": "subtle",
     "copilot": {
       "proxy": null,
       "proxy_no_verify": null,
     },
-    "enabled_in_text_threads": false,
   },
   "agent": {
+    "favorite_models": [
+      {
+        "provider": "copilot_chat",
+        "model": "gpt-5-mini",
+        "enable_thinking": false
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "gpt-5.4-mini",
+        "enable_thinking": false
+      }
+    ],
     "play_sound_when_agent_done": true,
     "default_profile": "write",
     "model_parameters": [],
     "default_model": {
-      "provider": "openai",
-      "model": "gpt-5",
+      "effort": "high",
+      "provider": "copilot_chat",
+      "model": "gpt-5-mini",
     },
   },
   "ui_font_size": 16,
